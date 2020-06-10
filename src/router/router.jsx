@@ -7,11 +7,10 @@ import {
   useParams,
   useRouteMatch
 } from 'react-router-dom'
-// import RedirectUse from './router/redirect'
-import NotMatchPage from './router/noMatch'
-import './App.css';
+import RedirectUse from './router/redirect'
 
-function App() {
+
+function RouterDemo() {
   return (
     <Router>
       <div>
@@ -35,27 +34,27 @@ function App() {
             <Link to='/topics'>topics</Link>
           </li> */}
           {/* 重定向 */}
-          {/* <li>
+          <li>
             <Link to='/redirect'>redirect</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
       <hr/>
       <Switch>
-        <Route path='/'>
-          <NotMatchPage />
+        {/* <Route exact path='/'>
+          <Home />
         </Route>
-        {/* <Route path='/about'>
+        <Route path='/about'>
           <About />
         </Route> */}
         {/* 带参数 */}
         {/* <Route path='/:id' children={<Child />}></Route> */}
-        {/* <Route path='/topics'>
+        <Route path='/topics'>
           <Topics />
         </Route>
         <Route path='/redirect'>
           <RedirectUse />
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
   );
@@ -124,4 +123,4 @@ function About (){
   )
 }
 
-export default App;
+export default RouterDemo;
